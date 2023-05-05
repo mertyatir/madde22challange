@@ -1,38 +1,126 @@
+/* COLORS */
+
+:root {
+  --pink: #ff0d87;
+  --white-smoke: #f5f5f5;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 15vmin;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* FONTS */
+
+@font-face {
+  font-family: GalanoGrotesqueExtraBold;
+  src: url("./assets/fonts/Galano Font/GalanoGrotesqueExtraBold.otf");
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: GalanoGrotesqueBold;
+  src: url("./assets/fonts/Galano Font/GalanoGrotesqueBold.otf");
+}
+
+@font-face {
+  font-family: GalanoGrotesqueMedium;
+  src: url("./assets/fonts/Galano Font/GalanoGrotesqueMedium.otf");
+}
+
+@font-face {
+  font-family: GalanoGrotesqueRegular;
+  src: url("./assets/fonts/Galano Font/GalanoGrotesqueRegular.otf");
+}
+
+/* HEADER */
+
+h2 {
+  font-family: GalanoGrotesqueBold;
+  font-size: 35px;
+}
+
+.heading {
+  line-height: 2.5 rem;
+  font-size: 32px;
+  margin-bottom: 2.5 rem;
+}
+
+/* SELECTIONBAR */
+
+.buttonActiveSubDivider {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 4px;
+  background: var(--uniq-colors-brand-500);
+}
+
+.selectionButton {
+  font-size: 16px;
+  background: transparent;
+  border-width: 0;
+  font-family: GalanoGrotesqueRegular;
+}
+
+.selectionButtonContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  position: sticky;
+}
+
+.selectionButtonContainer {
+  justify-content: center;
+}
+
+.menuContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input {
+  width: 200px;
+  height: 48px;
+  min-width: 0px;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  position: relative;
+  border-width: 1px;
+  border-color: #dedede;
+  padding-inline-start: 46px;
+  padding-inline-end: 46px;
+  font-size: 14px;
+}
+
+.placeholderDiv {
+  width: 200px;
+  height: 48px;
+}
+
+.searchIconContainer {
+  left: 0;
+  width: 46px;
+  height: 100%;
+  font-size: 14px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: absolute;
+  top: 0px;
+  z-index: 2;
+  pointer-events: none;
+  color: initial;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.searchContainer {
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  justify-content: center;
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
 }
