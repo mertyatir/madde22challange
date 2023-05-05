@@ -50,6 +50,10 @@ h2 {
 
 /* SELECTIONBAR */
 
+.menuContainer {
+  padding-bottom: 1rem;
+}
+
 .buttonActiveSubDivider {
   position: absolute;
   bottom: 0px;
@@ -79,6 +83,9 @@ h2 {
 .menuContainer {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-inline-start: 5rem;
+  padding-inline-end: 5rem;
 }
 
 .input {
@@ -123,4 +130,61 @@ h2 {
   border-width: 0;
   border-style: solid;
   box-sizing: border-box;
+}
+
+/* FILTER SECTION */
+
+.filterSectionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-color: var(--white-smoke);
+}
+
+.filterButton {
+  display: flex;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  width: auto;
+  line-height: var(--uniq-lineHeights-26);
+  border-radius: var(--uniq-radii-none);
+  font-weight: var(--uniq-fontWeights-normal);
+  height: 26px;
+  min-width: auto;
+  font-size: 16px;
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
+  background: none;
+  color: var(--pink);
+  margin: 0px;
+  padding: 0px;
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+}
+
+.filterSectionDivider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.CalendarIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  margin-inline-end: 1rem;
+}
+
+.filterIconContainer {
+  margin-inline-end: 1rem;
 }

@@ -4,11 +4,16 @@ import { ReactComponent as SearchIcon } from "../assets/Search.svg"
 
 function SearchBar() {
   return (
-    <div class="searchContainer">
-      <div class="searchIconContainer">
+    <div className="searchContainer">
+      <div className="searchIconContainer">
         <SearchIcon className="searchIcon" />
       </div>
-      <input type="text" placeholder="Arama" name="searchTerm" class="input" />
+      <input
+        type="text"
+        placeholder="Etkinlik Ara"
+        name="searchTerm"
+        className="input"
+      />
     </div>
   )
 }

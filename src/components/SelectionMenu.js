@@ -14,17 +14,17 @@ function SelectionMenu() {
   function Item(props) {
     return (
       <div>
-        <button class="selectionButton">{props.value}</button>
-        <div class="buttonActiveSubDivider"></div>
+        <button className="selectionButton">{props.value}</button>
+        <div className="buttonActiveSubDivider"></div>
       </div>
     )
   }
 
   return (
-    <div class="menuContainer">
-      <div class="placeholderDiv" />
-      <div class="selectionMenu">
-        <div class="selectionButtonContainer">
+    <div className="menuContainer">
+      <div className="placeholderDiv" />
+      <div className="selectionMenu">
+        <div className="selectionButtonContainer">
           {items.map((item) => (
             <Item key={item.key} value={item} />
           ))}
