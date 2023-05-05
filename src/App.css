@@ -68,6 +68,7 @@ h2 {
   background: transparent;
   border-width: 0;
   font-family: GalanoGrotesqueRegular;
+  margin-inline-start: 1rem;
 }
 
 .selectionButtonContainer {
@@ -187,4 +188,169 @@ h2 {
 
 .filterIconContainer {
   margin-inline-end: 1rem;
+}
+
+/* ITEM LIST */
+
+.itemBoxListContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.itemBoxContainer {
+  margin-bottom: 1rem;
+  max-width: 1064px;
+  width: 100%;
+  grid-template-columns: 200px 1fr;
+  position: relative;
+  display: grid;
+}
+
+.dateContainer {
+  min-height: 204px;
+  background: black;
+  position: relative;
+  min-height: 212px;
+  padding: 0.25rem;
+}
+
+.bannerText {
+  white-space: nowrap;
+  min-width: 110px;
+  top: 16px;
+  left: auto;
+  right: -5px;
+  max-width: none;
+  display: inline-block;
+  padding-inline-start: 1.25rem;
+  padding-inline-end: 1.25rem;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: GalanoGrotesqueBold;
+  min-height: 22px;
+  color: white;
+  min-width: 95px;
+  text-align: center;
+  background: #9fae5d;
+  position: absolute;
+  right: auto;
+  z-index: 1;
+  max-width: 120px;
+}
+
+.innerDateContainer {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 35px 100px 35px 12px;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+.dateText {
+  font-family: GalanoGrotesqueBold;
+  font-size: 16px;
+  line-height: 2rem;
+  color: var(--pink);
+}
+
+.eventImageContainer {
+  inset: 16px -308px 16px 108px;
+  min-width: 308px;
+  position: absolute;
+  padding-inline-start: 5rem;
+  padding-inline-end: 5rem;
+  justify-content: space-between;
+  width: 100%;
+  margin-inline: auto;
+  max-width: 100%;
+  padding-inline: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.informationHeaderText {
+  color: black;
+  position: static;
+  font-size: 18px;
+
+  overflow: hidden;
+}
+
+.otherHalfofBox {
+  gap: 0px 33px;
+  grid-template-columns: 1fr 166px;
+  padding-left: 280px;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  display: grid;
+}
+
+.informationContainer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  word-wrap: break-word;
+}
+
+.buttonSectionContainer {
+  justify-content: center;
+  flex-direction: column;
+  display: flex;
+  word-wrap: break-word;
+}
+
+.informationItemButtonText {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  text-decoration: none;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  color: white;
+  height: 3rem;
+  min-width: 147px;
+  font-size: var(--uniq-fontSizes-sm);
+  padding-inline-start: var(--uniq-space-3);
+  padding-inline-end: var(--uniq-space-3);
+  display: flex;
+  -moz-box-align: center;
+  align-items: center;
+  -moz-box-pack: center;
+  justify-content: center;
+  background-color: var(--pink);
+}
+
+#addToCalendarButton {
+  margin-top: 0.5rem;
+  border-width: 0;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  min-width: 135px;
+  font-size: 16px;
+  font-family: GalanoGrotesqueRegular;
+}
+
+.addToCalendarText {
+  display: inline-flex;
+  align-self: center;
+  flex-shrink: 0;
+}
+
+#itemBoxLocationText {
+  margin-top: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 0px;
+  margin-inline-start: 0px;
+  margin-left: 5px;
+  font-size: 14px;
+  color: grey;
+  overflow: hidden;
+}
+
+#locationIcon {
+  margin-inline-end: 0.5rem;
 }
