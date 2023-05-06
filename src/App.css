@@ -49,7 +49,7 @@ h2 {
   padding-bottom: 1rem;
 }
 
-.buttonActiveSubDivider {
+.buttonActiveSubDivider.active {
   position: absolute;
   bottom: 0px;
   left: 0px;
@@ -57,19 +57,43 @@ h2 {
   height: 4px;
   background-color: var(--pink);
 }
+.buttonActiveSubDivider.inactive {
+  display: none !important;
+}
 
 .selectionButton {
+  position: relative;
   font-size: 16px;
   background: transparent;
   border-width: 0;
   font-family: GalanoGrotesqueRegular;
   margin-inline-start: 1rem;
+  cursor: pointer;
+}
+
+.selectionButtonText.inactive {
+  height: 47px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-weight: 400;
+}
+
+.selectionButtonText.active {
+  height: 47px;
+  color: var(--pink);
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  font-family: GalanoGrotesqueBold;
 }
 
 .selectionButtonContainer {
   display: flex;
   flex-direction: row;
   position: sticky;
+  font-family: GalanoGrotesqueRegular;
 }
 
 .selectionButtonContainer {

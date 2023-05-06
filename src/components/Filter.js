@@ -57,7 +57,7 @@ function Filter() {
           <DropdownItem text={"Maximum Uniq Lounge"} />
           <DropdownItem text={"Maximum Uniq Açıkhava"} />
           <DropdownItem text={"Bahçe Fuaye"} />
-          <h3>Etkinlik Mekanı</h3>
+          <h3>Etkinlik Tarihi</h3>
           <DropdownItem text={"Güncel Etkinlikler"} />
           <DropdownItem text={"Geçmiş Etkinlikler"} />
         </div>
