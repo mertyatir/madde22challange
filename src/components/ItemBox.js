@@ -9,12 +9,34 @@ import { ReactComponent as AddedIcon } from "../assets/images/added.svg"
 function ItemBox({ title, infoText, location, img, type }) {
   const [selected, setSelected] = useState([])
 
-  console.log("type", type)
+  let backgroundColor
+
+  switch (type) {
+    case "Konser":
+      backgroundColor = "#9FAE5D"
+      break
+    case "Stand up":
+      backgroundColor = "#F19653"
+      break
+    case "Sinema":
+      backgroundColor = "#F07266"
+      break
+    case "Tiyatro":
+      backgroundColor = "#B77CB8"
+      break
+    case "Çocuk":
+      backgroundColor = "#8B8000"
+      break
+    default:
+      backgroundColor = "#9FAE5D"
+  }
 
   return (
     <div className="itemBoxContainer">
       <div className="dateContainer">
-        <span className="bannerText">{type}</span>
+        <span className="bannerText" style={{ background: backgroundColor }}>
+          {type}
+        </span>
         <div className="innerDateContainer">
           <span className="dateText">7</span>
           <span className="dateText">Eylül</span>

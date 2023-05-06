@@ -7,8 +7,6 @@ function SelectionMenu() {
 
   const { setEventType } = useContext(FilterContext)
 
-  console.log("setEventType", setEventType)
-
   const items = [
     "Tüm Etkinlikler",
     "Tiyatro",
