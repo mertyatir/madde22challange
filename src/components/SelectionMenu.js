@@ -15,7 +15,6 @@ function SelectionMenu() {
     return (
       <div>
         <button className="selectionButton">{props.value}</button>
-        <div className="buttonActiveSubDivider"></div>
       </div>
     )
   }
@@ -28,6 +27,7 @@ function SelectionMenu() {
           {items.map((item) => (
             <Item key={item.key} value={item} />
           ))}
+          <div className="buttonActiveSubDivider"></div>
         </div>
       </div>
       <SearchBar />
