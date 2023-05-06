@@ -434,6 +434,7 @@ h2 {
 
 .dropDownMenuHeaderText {
   text-align: start;
+  font-family: GalanoGrotesqueBold;
 }
 
 .dropdownItem {
@@ -442,4 +443,9 @@ h2 {
   vertical-align: top;
   position: relative;
   align-items: center;
+}
+
+.dropdownItemText {
+  font-size: 15px;
+  font-family: GalanoGrotesqueRegular;
 }

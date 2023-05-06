@@ -30,7 +30,9 @@ function Filter() {
           {!selected && <BsSquare fill={"grey"} size={24} />}
           {selected && <BsCheckSquare fill={"#ff0d87"} size={24} />}
         </div>
-        <p style={{ marginLeft: 5 }}> {props.text} </p>
+        <p className="dropdownItemText" style={{ marginLeft: 5 }}>
+          {props.text}{" "}
+        </p>
       </div>
     )
   }
@@ -53,13 +55,13 @@ function Filter() {
         <div className="dropdownMenuContainer">
           <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
             <div className="dropdownInside">
-              <h3 className="dropDownMenuHeaderText">Etkinlik Mekanı</h3>
+              <p className="dropDownMenuHeaderText">Etkinlik Mekanı</p>
               <DropdownItem text={"Maximum Uniq Hall"} />
               <DropdownItem text={"Maximum Uniq Box"} />
               <DropdownItem text={"Maximum Uniq Lounge"} />
               <DropdownItem text={"Maximum Uniq Açıkhava"} />
               <DropdownItem text={"Bahçe Fuaye"} />
-              <h3 className="dropDownMenuHeaderText">Etkinlik Tarihi</h3>
+              <p className="dropDownMenuHeaderText">Etkinlik Tarihi</p>
               <DropdownItem text={"Güncel Etkinlikler"} />
               <DropdownItem text={"Geçmiş Etkinlikler"} />
             </div>
