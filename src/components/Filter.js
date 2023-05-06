@@ -50,16 +50,18 @@ function Filter() {
           </div>
           Filtrele
         </button>
-        <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
-          <h3>Etkinlik Mekanı</h3>
-          <DropdownItem text={"Maximum Uniq Hall"} />
-          <DropdownItem text={"Maximum Uniq Box"} />
-          <DropdownItem text={"Maximum Uniq Lounge"} />
-          <DropdownItem text={"Maximum Uniq Açıkhava"} />
-          <DropdownItem text={"Bahçe Fuaye"} />
-          <h3>Etkinlik Tarihi</h3>
-          <DropdownItem text={"Güncel Etkinlikler"} />
-          <DropdownItem text={"Geçmiş Etkinlikler"} />
+        <div className="drowdownMenuContainer">
+          <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>
+            <h3 className="drowDownMenuHeaderText">Etkinlik Mekanı</h3>
+            <DropdownItem text={"Maximum Uniq Hall"} />
+            <DropdownItem text={"Maximum Uniq Box"} />
+            <DropdownItem text={"Maximum Uniq Lounge"} />
+            <DropdownItem text={"Maximum Uniq Açıkhava"} />
+            <DropdownItem text={"Bahçe Fuaye"} />
+            <h3 className="drowDownMenuHeaderText">Etkinlik Tarihi</h3>
+            <DropdownItem text={"Güncel Etkinlikler"} />
+            <DropdownItem text={"Geçmiş Etkinlikler"} />
+          </div>
         </div>
       </div>
     </div>

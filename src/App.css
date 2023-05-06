@@ -414,6 +414,9 @@ h2 {
   position: absolute;
   display: flex;
   flex-direction: column;
+  z-index: 3;
+  background-color: #ffffff;
+  filter: drop-shadow(rgba(81, 81, 81, 0.2) 0px 4px 50px);
 }
 
 .dropdown-menu.inactive {
@@ -421,6 +424,10 @@ h2 {
   visibility: hidden;
   display: none !important;
   position: absolute;
+}
+
+.drowDownMenuHeaderText {
+  text-align: start;
 }
 
 .dropdownItem {
