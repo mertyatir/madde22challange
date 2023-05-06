@@ -151,6 +151,17 @@ h2 {
   cursor: pointer;
   white-space: nowrap;
 }
+.selectionButton:hover {
+  position: relative;
+  font-size: 16px;
+  background: transparent;
+  border-width: 0;
+  font-family: GalanoGrotesqueRegular;
+  margin-inline-start: 1rem;
+  cursor: pointer;
+  white-space: nowrap;
+  color: var(--pink);
+}
 
 .selectionButtonText.inactive {
   height: 47px;
@@ -249,6 +260,12 @@ h2 {
 .filterSectionText {
   font-family: GalanoGrotesqueRegular;
   font-size: 16px;
+}
+
+.filterSectionText:hover {
+  font-family: GalanoGrotesqueRegular;
+  font-size: 16px;
+  color: var(--pink);
 }
 
 .filterSectionContainer {
@@ -506,6 +523,8 @@ h2 {
 }
 
 .dropdown-menu.active {
+  transform: translateY(0);
+  transition: var(--speed) ease;
   opacity: 1;
   visibility: visible;
   position: absolute;
@@ -517,9 +536,11 @@ h2 {
 }
 
 .dropdown-menu.inactive {
+  transform: translateY(-20px);
+  transition: var(--speed) ease;
   opacity: 0;
   visibility: hidden;
-  display: none !important;
+
   position: absolute;
 }
 
