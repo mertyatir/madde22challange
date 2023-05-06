@@ -40,6 +40,86 @@
   src: url("./assets/fonts/Galano Font/GalanoGrotesqueRegular.otf");
 }
 
+/*MEDIA QUERIES*/
+
+/* MOBİLE */
+@media (max-width: 1064px) {
+  .searchContainer {
+    display: none !important;
+  }
+  .heading {
+    font-size: 24px;
+  }
+
+  .itemBoxContainer {
+    grid-template-columns: minmax(100%, 1fr) !important;
+  }
+  .otherHalfofBox {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .buttonSectionContainer {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+  .selectionMenu {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .placeholderDiv {
+    display: none !important;
+  }
+
+  .itemBoxContainer {
+    max-width: 344px !important;
+  }
+  .eventImageContainer {
+    inset: 80px 0 0 0 !important;
+    justify-content: center !important;
+  }
+  .bannerText {
+    inset: 16px auto auto -16px !important;
+    padding-inline: 0 !important;
+  }
+  .innerDateContainer {
+    display: flex !important;
+    flex-flow: row wrap !important;
+    align-items: baseline !important;
+    justify-content: center !important;
+    padding: 5px 0px 5px 10px !important;
+  }
+  .dateText {
+    color: white !important;
+    font-size: 16px !important;
+    padding-right: 2px !important;
+  }
+  .infoTextContainer {
+    width: 95%; /* Need to specify a width (can be any unit). overflow: hidden does nothing unless the width of .title is less than the width of the containing content */
+    overflow: hidden; /* to hide anything that doesn't fit in the containing element. */
+    white-space: nowrap; /* to make sure the line doesn't break when it is longer than the containing div. */
+    text-overflow: ellipsis; /* to make sure the text doesn't just disappear */
+  }
+  #itemBoxLocationText {
+    display: none !important;
+  }
+  .informationHeaderText {
+    margin-bottom: 0px !important;
+  }
+  .informationItemButtonText {
+    margin: 0px !important;
+  }
+  .infoTextContainer {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
 /* HEADER */
 
 h2 {
@@ -48,10 +128,6 @@ h2 {
 }
 
 /* SELECTIONBAR */
-
-.menuContainer {
-  padding-bottom: 1rem;
-}
 
 .buttonActiveSubDivider.active {
   position: absolute;
@@ -73,6 +149,7 @@ h2 {
   font-family: GalanoGrotesqueRegular;
   margin-inline-start: 1rem;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .selectionButtonText.inactive {
@@ -109,8 +186,9 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline-start: 5rem;
-  padding-inline-end: 5rem;
+
+  padding-bottom: 1rem;
+  overflow: auto;
 }
 
 .input {
@@ -177,8 +255,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: var(--white-smoke);
 }
 
@@ -272,7 +350,6 @@ h2 {
 }
 
 .dateContainer {
-  min-height: 204px;
   background: black;
   position: relative;
   min-height: 212px;
@@ -281,11 +358,10 @@ h2 {
 
 .bannerText {
   white-space: nowrap;
-  min-width: 110px;
+
   top: 16px;
   left: auto;
   right: -5px;
-  max-width: none;
   display: inline-block;
   padding-inline-start: 1.25rem;
   padding-inline-end: 1.25rem;
@@ -339,8 +415,9 @@ h2 {
   color: black;
   position: static;
   font-size: 18px;
-
+  font-family: GalanoGrotesqueBold;
   overflow: hidden;
+  text-align: start;
 }
 
 .otherHalfofBox {
@@ -383,10 +460,10 @@ h2 {
   align-items: center;
   justify-content: center;
   background-color: var(--pink);
+  font-family: GalanoGrotesqueBold;
 }
 
 #addToCalendarButton {
-  margin-top: 0.5rem;
   border-width: 0;
   background-color: white;
   align-items: center;

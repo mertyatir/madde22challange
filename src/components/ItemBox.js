@@ -12,7 +12,7 @@ function ItemBox({ title, infoText, img }) {
   return (
     <div className="itemBoxContainer">
       <div className="dateContainer">
-        <span class="bannerText">Konser</span>
+        <span className="bannerText">Konser</span>
         <div className="innerDateContainer">
           <span className="dateText">7</span>
           <span className="dateText">Eylül</span>
@@ -33,7 +33,10 @@ function ItemBox({ title, infoText, img }) {
             <LocationIcon id="locationIcon" />
             Maximum UNIQ Hall
           </p>
-          <p style={{ textAlign: "left" }}>{infoText}</p>
+
+          <p className="infoTextContainer" style={{ textAlign: "left" }}>
+            {infoText}
+          </p>
         </div>
         <div className="buttonSectionContainer">
           <p className="informationItemButtonText">Bilet Al</p>
@@ -45,7 +48,7 @@ function ItemBox({ title, infoText, img }) {
               setSelected(!selected)
             }}
           >
-            <span class="addToCalendarText"></span>
+            <span className="addToCalendarText"></span>
             {selected ? (
               <AddedIcon size={20} style={{ marginRight: 5 }} />
             ) : (
