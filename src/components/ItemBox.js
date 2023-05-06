@@ -6,13 +6,15 @@ import { BsPlusCircle } from "react-icons/bs"
 
 import { ReactComponent as AddedIcon } from "../assets/images/added.svg"
 
-function ItemBox({ title, infoText, location, img }) {
+function ItemBox({ title, infoText, location, img, type }) {
   const [selected, setSelected] = useState([])
+
+  console.log("type", type)
 
   return (
     <div className="itemBoxContainer">
       <div className="dateContainer">
-        <span className="bannerText">Konser</span>
+        <span className="bannerText">{type}</span>
         <div className="innerDateContainer">
           <span className="dateText">7</span>
           <span className="dateText">Eylül</span>

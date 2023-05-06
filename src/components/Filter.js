@@ -13,7 +13,7 @@ function Filter() {
 
   function DropdownItem(props) {
     const [selected, setSelected] = useState(false)
-    const [selectedFilter, setSelectedFilter] = useContext(FilterContext)
+    const { selectedFilter, setSelectedFilter } = useContext(FilterContext)
 
     return (
       <div

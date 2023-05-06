@@ -1,8 +1,13 @@
-import React, { useState } from "react"
+import React, { useContext, useState } from "react"
 import SearchBar from "./SearchBar"
+import { FilterContext } from "../providers/FilterProvider"
 
 function SelectionMenu() {
   const [selected, setSelected] = useState(0)
+
+  const { setEventType } = useContext(FilterContext)
+
+  console.log("setEventType", setEventType)
 
   const items = [
     "Tüm Etkinlikler",
@@ -20,6 +25,7 @@ function SelectionMenu() {
           className="selectionButton"
           onClick={() => {
             setSelected(props.index)
+            setEventType(props.value)
           }}
         >
           <p
