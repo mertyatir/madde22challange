@@ -50,7 +50,7 @@ function Filter() {
           <div className="filterIconContainer">
             {open ? <ThreeDots /> : <ThreeDotsInactive />}
           </div>
-          Filtrele
+          <p className="filterSectionText">Filtrele</p>
         </button>
         <div className="dropdownMenuContainer">
           <div className={`dropdown-menu ${open ? "active" : "inactive"}`}>

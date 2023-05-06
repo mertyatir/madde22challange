@@ -10,7 +10,7 @@ function FilterSection() {
         <div className="CalendarIconContainer">
           <CalendarIcon className="calendarIcon" />
         </div>
-        <p> Takvimde Gör</p>
+        <p className="filterSectionText"> Takvimde Gör</p>
       </div>
     </div>
   )
