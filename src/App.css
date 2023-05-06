@@ -148,7 +148,7 @@ h2 {
   background-color: var(--white-smoke);
 }
 
-.filterButton {
+.filterButton.active {
   display: flex;
   appearance: none;
   align-items: center;
@@ -172,6 +172,34 @@ h2 {
   border-width: 0;
   border-style: solid;
   box-sizing: border-box;
+  cursor: pointer;
+}
+
+.filterButton.inactive {
+  display: flex;
+  appearance: none;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  position: relative;
+  white-space: nowrap;
+  vertical-align: middle;
+  outline: transparent solid 2px;
+  outline-offset: 2px;
+  width: auto;
+  height: 26px;
+  min-width: auto;
+  font-size: 16px;
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
+  background: none;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  cursor: pointer;
 }
 
 .filterSectionDivider {
@@ -328,6 +356,9 @@ h2 {
   min-width: 135px;
   font-size: 16px;
   font-family: GalanoGrotesqueRegular;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .addToCalendarText {
@@ -366,11 +397,6 @@ h2 {
   visibility: hidden;
   display: none !important;
   position: absolute;
-}
-
-.filterSectionDivider:hover {
-  color: var(--pink);
-  cursor: pointer;
 }
 
 .dropdownItem {

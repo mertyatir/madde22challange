@@ -1,8 +1,14 @@
-import React from "react"
+import React, { useState } from "react"
 
 import { ReactComponent as LocationIcon } from "../assets/Frame.svg"
 
+import { BsPlusCircle } from "react-icons/bs"
+
+import { ReactComponent as AddedIcon } from "../assets/added.svg"
+
 function ItemBox({ title, infoText, img }) {
+  const [selected, setSelected] = useState(false)
+
   return (
     <div className="itemBoxContainer">
       <div className="dateContainer">
@@ -35,12 +41,18 @@ function ItemBox({ title, infoText, img }) {
           <button
             type="button"
             id="addToCalendarButton"
-            aria-haspopup="dialog"
-            aria-expanded="false"
-            aria-controls="popover-content-76"
+            onClick={() => {
+              setSelected(!selected)
+            }}
           >
             <span class="addToCalendarText"></span>
-            Takvime Ekle
+            {selected ? (
+              <AddedIcon size={20} style={{ marginRight: 5 }} />
+            ) : (
+              <BsPlusCircle size={20} style={{ marginRight: 5 }} />
+            )}
+
+            {selected ? "Takvime Eklendi" : "Takvime Ekle"}
           </button>
         </div>
       </div>

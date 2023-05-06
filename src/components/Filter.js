@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react"
 import { ReactComponent as ThreeDots } from "../assets/threeDots.svg"
+import { ReactComponent as ThreeDotsInactive } from "../assets/threeDotsInactive.svg"
 
 import { BsSquare, BsCheckSquare } from "react-icons/bs"
 
@@ -39,13 +40,13 @@ function Filter() {
       <div className="menu-container" ref={menuRef}>
         <button
           type="button"
-          className="filterButton"
+          className={`filterButton ${open ? "active" : "inactive"}`}
           onClick={() => {
             setOpen(!open)
           }}
         >
           <div className="filterIconContainer">
-            <ThreeDots />
+            {open ? <ThreeDots /> : <ThreeDotsInactive />}
           </div>
           Filtrele
         </button>
