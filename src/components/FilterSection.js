@@ -1,6 +1,6 @@
 import React from "react"
 import Filter from "./Filter"
-import { ReactComponent as CalendarIcon } from "../assets/Calendar.svg"
+import { ReactComponent as CalendarIcon } from "../assets/images/Calendar.svg"
 
 function FilterSection() {
   return (

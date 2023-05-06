@@ -1,6 +1,6 @@
 import React from "react"
 
-import { ReactComponent as SearchIcon } from "../assets/Search.svg"
+import { ReactComponent as SearchIcon } from "../assets/images/Search.svg"
 
 function SearchBar() {
   return (

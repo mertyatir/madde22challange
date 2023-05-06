@@ -1,8 +1,10 @@
-import React, { useState, useRef } from "react"
-import { ReactComponent as ThreeDots } from "../assets/threeDots.svg"
-import { ReactComponent as ThreeDotsInactive } from "../assets/threeDotsInactive.svg"
+import React, { useState, useRef, useContext } from "react"
+import { ReactComponent as ThreeDots } from "../assets/images/threeDots.svg"
+import { ReactComponent as ThreeDotsInactive } from "../assets/images/threeDotsInactive.svg"
 
 import { BsSquare, BsCheckSquare } from "react-icons/bs"
+
+import { FilterContext } from "../providers/FilterProvider"
 
 function Filter() {
   const [open, setOpen] = useState(false)
@@ -11,11 +13,18 @@ function Filter() {
 
   function DropdownItem(props) {
     const [selected, setSelected] = useState(false)
+    const [selectedFilter, setSelectedFilter] = useContext(FilterContext)
+
     return (
       <div
         className="dropdownItem"
         onClick={() => {
           setSelected(!selected)
+          if (selected) {
+            setSelectedFilter(
+              selectedFilter.filter((item) => item !== props.text)
+            )
+          } else setSelectedFilter(selectedFilter.concat(props.text))
         }}
       >
         <div className="dropdownItemCheckboxContainer">

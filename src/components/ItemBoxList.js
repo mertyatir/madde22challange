@@ -1,41 +1,31 @@
-import React from "react"
+import React, { useContext } from "react"
 import ItemBox from "./ItemBox"
-import eventImageLarge1 from "../assets/EventImageLarge1.png"
-import eventImageLarge2 from "../assets/EventImageLarge2.png"
-import eventImageLarge3 from "../assets/EventImageLarge3.png"
+
+import { eventInfo } from "../mockData/evetInfo"
+
+import { FilterContext } from "../providers/FilterProvider"
 
 function ItemBoxList() {
-  let items = [
-    {
-      title: "BKM Yaz Etkinlikleri: Zengin Mutfağı",
-      infoText: `1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı
-            Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde
-            ve genç bir.... Detaylı Bilgi`,
-      img: eventImageLarge1,
-    },
-    {
-      title: "Yasemin Sakallıoğlu",
-      infoText: `1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı
-            Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde
-            ve genç bir.... Detaylı Bilgi`,
-      img: eventImageLarge2,
-    },
-    {
-      title: "Sinema Keyfi: Rifkin’s Festival",
-      infoText: `1978 yılında ilk kez İstanbul Şehir Tiyatrolarında bu oyunda aşçı
-            Lütfü Usta’yı canlandıran Şener Şen, 40 yıl aradan sonra aynı rolde
-            ve genç bir.... Detaylı Bilgi`,
-      img: eventImageLarge3,
-    },
-  ]
+  const [selectedFilter] = useContext(FilterContext)
 
-  items = items.concat(items)
+  const items = eventInfo
 
   return (
     <div className="itemBoxListContainer">
-      {items.map((item) => (
-        <ItemBox title={item.title} infoText={item.infoText} img={item.img} />
-      ))}
+      {items
+        .filter(
+          (item) =>
+            selectedFilter.length === 0 ||
+            selectedFilter.includes(item.location)
+        )
+        .map((item) => (
+          <ItemBox
+            title={item.title}
+            infoText={item.infoText}
+            location={item.location}
+            img={item.img}
+          />
+        ))}
     </div>
   )
 }

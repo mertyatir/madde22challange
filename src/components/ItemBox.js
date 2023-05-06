@@ -1,13 +1,13 @@
 import React, { useState } from "react"
 
-import { ReactComponent as LocationIcon } from "../assets/Frame.svg"
+import { ReactComponent as LocationIcon } from "../assets/images/Frame.svg"
 
 import { BsPlusCircle } from "react-icons/bs"
 
-import { ReactComponent as AddedIcon } from "../assets/added.svg"
+import { ReactComponent as AddedIcon } from "../assets/images/added.svg"
 
-function ItemBox({ title, infoText, img }) {
-  const [selected, setSelected] = useState(false)
+function ItemBox({ title, infoText, location, img }) {
+  const [selected, setSelected] = useState([])
 
   return (
     <div className="itemBoxContainer">
@@ -31,7 +31,7 @@ function ItemBox({ title, infoText, img }) {
           <p id="itemBoxLocationText">
             {" "}
             <LocationIcon id="locationIcon" />
-            Maximum UNIQ Hall
+            {location}
           </p>
 
           <p className="infoTextContainer" style={{ textAlign: "left" }}>
