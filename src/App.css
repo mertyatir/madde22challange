@@ -408,6 +408,12 @@ h2 {
 
 /* DROPDOWN MENU */
 
+.dropdownInside {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
 .dropdown-menu.active {
   opacity: 1;
   visibility: visible;
