@@ -1,5 +1,9 @@
 Website built from figma design.
 
+
+Stack:
+
+React
 TypeScript
 Next.js
 Responsive
